@@ -28,9 +28,9 @@ mainloop = True
 
 while mainloop:
     for i in range(10):
-        if i == password[x]:
-           temp = str(i) 
-           repassword.append(temp)
+        subPassword = int(password) 
+        if i == subPassword[x]:
+           repassword.append(i)
 
     for i2 in string.ascii_letters:
         if i2 == password[x]:
