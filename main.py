@@ -28,9 +28,13 @@ mainloop = True
 
 while mainloop:
     for i in range(10):
-        subPassword = int(password) 
-        if i == subPassword[x]:
-           repassword.append(i)
+        try:
+            subPassword = int(password) 
+            if i == subPassword[x]:
+            repassword.append(i)
+        
+        except ValueError:
+            break 
 
     for i2 in string.ascii_letters:
         if i2 == password[x]:
