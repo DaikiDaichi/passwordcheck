@@ -24,19 +24,21 @@ while inputLoopToggle:
 
 # ==============================================================================
 x = 0
+mainloop = True
 
-for i in range(10):
-    if i == password[x]:
-        repassword.append(i)
+while mainloop:
+    for i in range(10):
+        if i == password[x]:
+           temp = str(i) 
+           repassword.append(temp)
 
-for i2 in string.ascii_letters:
-
-    if i2 == password[x]:
-        repassword.append(i2)
+    for i2 in string.ascii_letters:
+        if i2 == password[x]:
+           repassword.append(i2)
 
     x += 1
 
     if x >= len(password):
-        break
+        mainloop = False
 
 print(str(repassword))
